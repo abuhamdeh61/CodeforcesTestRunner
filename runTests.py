@@ -30,6 +30,7 @@ inputs,outputs=[],[]
 
 for i in range(len(soup)):
     soup[i]=str(soup[i]).replace('<br/>',' ')
+    soup[i]=str(soup[i]).replace('</div>',' ')
     soup[i]=BeautifulSoup(soup[i],'html.parser')
     if i%2==0:
         inputs.append(soup[i].text)
